@@ -1,6 +1,6 @@
-class CreateStructuredNotes < ActiveRecord::Migration
+class CreateProblems < ActiveRecord::Migration
   def change
-    create_table :structured_notes do |t|
+    create_table :problems do |t|
       t.string :name
       t.text :dx
       t.text :tx
