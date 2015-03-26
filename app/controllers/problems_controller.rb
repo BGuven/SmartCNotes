@@ -13,7 +13,12 @@ class ProblemsController < ApplicationController
   # GET /problems/1.json
   def show
     # fetch sub problems and put it in json
-    render json: @problem
+    cause = []
+    @problem.problem_references.each do |problem_reference|
+      cause << problem_reference.sub_problem
+    end
+    @problem_attributes  = @problem.attributes.merge(cause: cause)
+    render json: @problem_attributes
   end
 
   # POST /problems
