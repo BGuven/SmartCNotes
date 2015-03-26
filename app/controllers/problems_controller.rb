@@ -12,6 +12,7 @@ class ProblemsController < ApplicationController
   # GET /problems/1
   # GET /problems/1.json
   def show
+    # fetch sub problems and put it in json
     render json: @problem
   end
 

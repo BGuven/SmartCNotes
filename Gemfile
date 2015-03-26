@@ -11,6 +11,7 @@ gem 'sqlite3'
 
 gem 'rspec-rails'
 
+gem 'rack-cors', :require => 'rack/cors'
 
 
 # To use ActiveModel has_secure_password
